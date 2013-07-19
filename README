@@ -1,8 +1,39 @@
 Version 0.0.2
-This project is still in early alpha, but it aims to present an intuitive simple interface for background listening using cumSphinx's gstreamer plugin.
+This project is still an alpha, but it aims to present an intuitive interface for background listening using cumSphinx's gstreamer plugin on Linux.
 
 See /source/sphinxwrap.py for module
+See /source/sphinxwrap.pyc for precompiled module
 See /source/basic demo.py for demo
 
-Sorry for the lack of documentation, if you have any questions please email me (remove spaces):
-bakita joshua @ gmail . com
+This module has only been tested on Ubuntu, but may work on other Linux distributions.
+
+Installation:
+(TODO)
+
+Documentation:
+(Anything inside <> should be replaced)
+(Anything inside [] is a comment)
+
+To import the module:
+  import sphinxwrap
+
+To create a listening instance call:
+  sphinxwrap.backgroundListener(<OPTIONAL: audio source, defaults to "alsasrc">)
+
+To add a particular word to listen for use the add method:
+  .add(<a word of type str>, <event callback>)
+  [returns True is successful]
+  [raises ValueError if the word is not of type str]
+  [rasies ValueError if the callback can not be called]
+
+To stop listening for a particular word use the remove method:
+  .remove(<a word of type str>)
+  [returns True is successful, False otherwise.]
+  [raises ValueError if the word is not of type str]
+
+To start listening call the startListening method:
+  .startListening()
+
+To stop listening call the stopListening method:
+  .stopListening()
+  

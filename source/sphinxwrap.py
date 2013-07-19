@@ -17,7 +17,9 @@ class backgroundListener(threading.Thread):
 			Rasies ValueError if string is not of type str."""
 		try:
 			assert str == type(string)
+			assert hasattr(event, '__call__')
 			self.searchTerms[string.lower()] = event
+			return True
 		except(AssertionError):
 			raise ValueError
 	def remove(self, string):
@@ -43,7 +45,7 @@ class backgroundListener(threading.Thread):
 			Pauses searchTerms for specified words in microphone audio stream."""
 		self.pipeline.set_state(gst.STATE_PAUSED)
 	def sphinxResult(self, sphinx, text, uttid):
-		"Internal function, called when sphinx has a hypothesis"
+		"Private function, called when sphinx has a hypothesis"
 		for key in self.searchTerms.keys():
 			if (key in text):
 				self.searchTerms[key]()

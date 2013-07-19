@@ -4,12 +4,12 @@ import threading
 import gobject
 gobject.threads_init()
 class backgroundListener(threading.Thread):
-	def __init__(self, src='alsasrc'):
+	def __init__(self, src = 'alsasrc'):
 		threading.Thread.__init__(self, name='VRecognisionThread')
-		self.pipeline=gst.parse_launch(src + ' ! audioconvert ! audioresample  ! vader name=vad auto-threshold=true ! pocketsphinx name=asr ! appsink sync=false name=appsink')
-		self.sphinx=self.pipeline.get_by_name('asr')
+		self.pipeline = gst.parse_launch(src + ' ! audioconvert ! audioresample  ! vader name = vad auto-threshold = true ! pocketsphinx name = asr ! appsink sync = false name = appsink')
+		self.sphinx = self.pipeline.get_by_name('asr')
 		self.sphinx.connect('result', self.sphinxResult)
-		self.searchTerms={}
+		self.searchTerms = {}
 	def add(self, string, event):
 		"""Accepts an event to be triggered when a string is found in an utterance
 			-event should be a function

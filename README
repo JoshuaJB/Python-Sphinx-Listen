@@ -8,7 +8,11 @@ See /source/basic demo.py for demo
 This module has only been tested on Ubuntu, but may work on other Linux distributions.
 
 Installation:
-(TODO)
+(Un-tested, may need other dependencies)
+  Ubuntu:
+    Install the following packages: gstreamer0.10-pocketsphinx and pocketsphinx-hmm-en-hub4wsj
+    Download /source/sphinxwrap.py and include in program.
+    (Download the entire source if you want API documentation and sample code)
 
 Documentation:
 (Anything inside <> should be replaced)
@@ -36,4 +40,7 @@ To start listening call the startListening method:
 
 To stop listening call the stopListening method:
   .stopListening()
-  
+
+Licensing:
+Module is avalible under The Apache 2.0 License.
+Sample code is avalible under The MIT Licence.

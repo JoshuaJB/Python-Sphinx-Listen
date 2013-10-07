@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 ###############################################################################
 # Copyright (c) 2013 Joshua Bakita
 #
@@ -19,18 +20,23 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 ###############################################################################
-
-#!/usr/bin/env python
 import sphinxwrap
 import time
+
+# This is one of our callbacks that we use later
 def printNote():
-	print "Yes?"
-mic=sphinxwrap.backgroundListener()
+	print("Yes?")
+
+# Initilize the listener
+mic = sphinxwrap.backgroundListener()
+
+# Add "computer" and "close" to the words to listen for
 mic.add("computer", printNote)
 mic.add("close", exit)
+
+# Start listening
 mic.startListening()
-i=6
-while(i>0):
-	i-=1
-	time.sleep(10)
-	print 10*i
+
+# Wait 60 seconds before closing
+time.sleep(60)
+

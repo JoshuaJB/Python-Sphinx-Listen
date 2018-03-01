@@ -1,5 +1,5 @@
-#Python-Listen
-###Version 0.0.2
+# Python-Listen
+### Version 0.0.2
 This project is still only in the early stages, but it aims to present an intuitive interface for background listening and speech to text using cumSphinx's gstreamer plugin on Linux.
 
 
@@ -10,7 +10,7 @@ This project is still only in the early stages, but it aims to present an intuit
 
 This module has only been tested on Ubuntu, but may work on other Linux distributions.
 
-##Installation:
+## Installation:
 (Un-tested, may need other dependencies)
 
 1.  Ubuntu:
@@ -18,7 +18,7 @@ This module has only been tested on Ubuntu, but may work on other Linux distribu
   *  Download /source/sphinxwrap.py and include in program.
   *  (Download the entire source if you want API documentation and sample code)
 
-##Documentation:
+## Documentation:
 (Anything inside <> should be replaced)
 
 To import the module:
@@ -56,6 +56,6 @@ To stop listening call the *stopListening* method:
   .stopListening()
 ```
 
-##Licensing:
+## Licensing:
 Module is avalible under The Apache 2.0 License.
 Sample code is avalible under The MIT Licence.

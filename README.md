@@ -1,6 +1,6 @@
 # Python-Listen
 ### Version 0.0.2
-This project is still only in the early stages, but it aims to present an intuitive interface for background listening and speech to text using cumSphinx's gstreamer plugin on Linux.
+This project is still only in the early stages, but it aims to present an intuitive interface for background listening and speech to text using CMUSphinx's gstreamer plugin on Linux.
 
 
 * See /source/sphinxwrap.py for module
